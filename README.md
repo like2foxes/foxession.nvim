@@ -1,9 +1,3 @@
-Let me first review the contents of the uploaded file and then draft a proper README for your Neovim plugin.
-
-Based on the initial review of the file, it seems like this Neovim plugin is designed to manage session files efficiently. Here's a draft of the README file for your plugin:
-
----
-
 # Foxession.nvim
 
 **Foxession.nvim** is a Neovim plugin for managing sessions with simplicity and flexibility. It allows you to save, load, and list sessions, along with optional auto-save functionality to streamline your workflow.
