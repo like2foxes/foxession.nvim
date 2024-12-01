@@ -15,59 +15,34 @@
 
 ## Installation
 
-### Using [packer.nvim](https://github.com/wbthomason/packer.nvim)
-
-Add the following to your `init.lua` or `init.vim`:
-
-```lua
-use {
-    'yourusername/foxession.nvim',
-    config = function()
-        require('foxession').setup({
-            session_dir = vim.fn.stdpath('data') .. '/sessions/', -- Customize session directory
-            auto_save = true,                                    -- Enable auto-save
-        })
-    end
-}
-```
-
 ### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-require('lazy').setup({
-    'yourusername/foxession.nvim',
-    config = function()
-        require('foxession').setup({
-            session_dir = vim.fn.stdpath('data') .. '/sessions/',
-            auto_save = true,
-        })
-    end
-})
+{ 'like2foxes/foxession.nvim', }
 ```
 
 ---
 
 ## Configuration
 
-Foxession.nvim can be configured using the `setup` function. Below are the default options:
+Foxession will use the following defaults:
 
 ```lua
-require('foxession').setup({
+opts = {
     session_dir = vim.fn.stdpath('data') .. '/sessions/', -- Directory for storing sessions
     auto_save = false,                                   -- Disable auto-save by default
     keys = {
         save_session = '<leader>ps',                     -- Save session
         load_session = '<leader>pl',                     -- Load session
         list_sessions = '<leader>pa',                    -- List available sessions
-    },
-})
+    }
 ```
 
 ### Keybindings
 
 - `<leader>ps`: Save the current session.
-- `<leader>pl`: Load a session from the saved list.
-- `<leader>pa`: List all saved sessions interactively.
+- `<leader>pl`: Load a previously saved session.
+- `<leader>pa`: List all saved sessions interactively and pick the one to load.
 
 ---
 
@@ -103,5 +78,3 @@ require('foxession').setup({
 This plugin is licensed under the MIT License.
 
 ---
-
-If there are additional features or clarifications needed based on the complete script, let me know!
